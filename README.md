@@ -229,12 +229,15 @@ REALITY分为大字和小字两部分，大字精确到0.01，小字精确到0.0
 读谱、手法、多指的记分计算公式如下(以读谱为例)：  
 $$
 \text{single.read} =
-\begin{cases} 
+\left\{
+\begin{array}{ll}
 0, & \text{score} \in [0,995000) \\
 \left(\frac{\text{score} - 995000}{10000}\right)^2 \times \text{distri.read}, & \text{score} \in [995000,1005000) \\
 \text{distri.read}, & \text{score} \in [1005000,1010000]
-\end{cases}
+\end{array}
+\right.
 $$
+
 
 $$
 \text{single.read}(1) \geq \text{single.read}(2) \geq \dots \geq \text{single.read}(7)
