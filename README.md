@@ -112,12 +112,13 @@ QQ群：Milthm查分表实验室：678471942
 ### 3.1 REALITY计算v0.6.1
 单曲REALITY是单曲分数和定数的函数，计算公式如下：  
 $$
-\text{single.rlt}(\text{constant}, \text{score}) =
+\mathrm{single.rlt}(\text{constant}, \text{score}) =
 \begin{cases} 
 0, & \text{score} \in [0,700000) \\
 \text{constant} + f(\text{score}), & \text{score} \in [700000,1010000]
 \end{cases}
 $$
+
 
 $$
 f(\text{score}) =
