@@ -227,17 +227,13 @@ REALITY分为大字和小字两部分，大字精确到0.01，小字精确到0.0
 ### 3.4 雷达图v0.6.3
 雷达图需要参考各谱面的难度分布和分数，给出单曲单维度记分，再计算各维度总分并换算为10分满分制。  
 读谱、手法、多指的记分计算公式如下(以读谱为例)：
-
-
 $$
 \text{single.read} =
-\left\{
-\begin{array}{ll}
+\begin{cases}
 0, & \text{score} \in [0,995000) \\
 \left(\frac{\text{score} - 995000}{10000}\right)^2 \times \text{distri.read}, & \text{score} \in [995000,1005000) \\
 \text{distri.read}, & \text{score} \in [1005000,1010000]
-\end{array}
-\right.
+\end{cases}
 $$
 
 
